@@ -1,0 +1,141 @@
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+html{
+    font:#{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family;
+    overflow-y:scroll;
+    min-height:100%;
+}
+
+body{
+  -webkit-font-smoothing: antialiased;
+}
+
+.site{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 10;
+  background-color: #fff;
+  -webkit-transition: -webkit-transform .2s ease;
+     -moz-transition: -moz-transform .2s ease;
+       -o-transition: -o-transform .2s ease;
+          transition: transform .2s ease;
+
+  &.menu-open{
+    @include vendor('transform', translateX(-250px));
+  }
+}
+
+.nav-wrap{
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #21262c;
+  color: #fff;
+  padding: 40px 0;
+
+  a{
+    color: #888;
+    text-decoration: none;
+
+    &:hover{
+      color: #fff;
+      text-decoration: none;
+      @include vendor('transition', color .2s);
+    }
+  }
+
+  .current-menu-item a{
+    color: #fff;
+  }
+}
+
+.nav-inner{
+  padding: 30px 30px 0;
+  position: relative;
+}
+
+.main-nav{
+  letter-spacing: 1px;
+  font-weight: 700;
+  line-height: 34px;
+  font-size: 20px;
+
+  .home & {
+    li:first-child a {
+      color: #fff;
+    }
+  }
+}
+
+.header{
+  background: #21262c url('images/header.jpg') bottom center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+
+  &:after{
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: block;
+    position: absolute;
+    z-index: 12;
+  }
+}
+
+.header-wrap{
+  position: relative;
+  z-index: 20;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 0;
+  @extend .cf;
+}
+
+.site-title{
+  float: left;
+  margin: 0;
+}
+
+.logo{
+  font-size: 10px;
+  color: #fff;
+  text-decoration: none;
+  width: 20em;
+  height: 4.5em;
+  background: transparent url('images/logo.svg') left top no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  display: block;
+  text-indent: -9999px;
+}
+
+
+.footer{
+  position: relative;
+  min-height: 350px;
+  background: #21262c url('images/footer.jpg') bottom left no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  &:after{
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+    display: block;
+    position: absolute;
+    z-index: 12;
+  }
+}

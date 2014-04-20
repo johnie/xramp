@@ -1,0 +1,30 @@
+/*------------------------------------* 
+   $SKEW BLOCKS 
+*------------------------------------*/
+/** 
+ * Skewed blocks 
+ */
+
+.skew{
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: 22;
+}
+
+.skew--top{  
+  bottom: 0;
+  left: 0;
+  border-width: 100px 0 0 1400px;
+  border-color: transparent transparent transparent #fff;
+  border-style: solid solid solid dashed;
+}
+
+.skew--bottom{
+  top: 0;
+  left: 0;
+  border-width: 0 1400px 100px 0;
+  border-style: solid dashed solid solid;
+  border-color: transparent #FFF transparent transparent;
+}

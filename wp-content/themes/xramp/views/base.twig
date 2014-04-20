@@ -1,0 +1,39 @@
+{% include 'html-header.twig' %}
+{% block head %}
+{% endblock %}
+</head>
+<body class="{{body_class}}" data-source="base.twig">
+
+<nav class="nav-wrap">
+  <div class="nav-inner">
+    <div class="close-btn"><span>Close</span></div>
+    <ul class="nav nav--stacked main-nav">
+      {% for item in menu.items %}
+        <li id="menu-item-{{item.ID}}" class="menu-item menu-item-type-{{item.type}} menu-item-object-{{item.object}} menu-item-{{item.ID}} {% if item.current %} current-menu-item{% endif %}">
+          <a href="{{item.link}}">{{item.title}}</a>
+        </li>
+      {% endfor %}
+      </ul>
+  </div>
+
+  <div class="nav-inner">
+    <ul class="nav nav--stacked secondary-nav">
+      {% for item in secondary.items %}
+        <li id="menu-item-{{item.ID}}" class="menu-item menu-item-type-{{item.type}} menu-item-object-{{item.object}} menu-item-{{item.ID}} {% if item.current %} current-menu-item{% endif %}">
+          <a href="{{item.link}}">{{item.title}}</a>
+        </li>
+      {% endfor %}
+      </ul>
+  </div>
+</nav>
+
+<div class="site">
+  {% include 'header.twig' %}
+    <div class="container container-padding">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, delectus, voluptatem rerum molestias sint tempora fugiat corporis nesciunt at temporibus. At ratione enim consequatur voluptatem unde perspiciatis hic asperiores aperiam.</p>
+    </div>
+  {% include 'footer.twig' %}
+</div>
+{{ function('wp_footer') }}
+</body>
+</html>
