@@ -1,5 +1,31 @@
 <footer class="footer">
-  <?php echo date('Y'); ?>
+  
+  <div class="footer-wrap">
+    <div class="grid footer-blocks">
+      <div class="grid__item  one-third">
+        <h3 class="footer-title">Frågor</h3>
+
+        <p>Har du frågor, vill köpa något som inte finns i shoppen, samarbeta eller bara säga hej? Hör av dig! <a href="mailto:info@xramp.se">info@xramp.se</a></p>
+      </div>
+      <div class="grid__item  one-third">
+        <h3 class="footer-title">Nyheter</h3>
+
+        <p>Få en uppdatering när X･Ramp släpper något nytt eller har något spännande att berätta.</p>
+
+        <div class="newsletter-wrap">
+          <input type="text" name="newsletter" id="newsletter" placeholder="stadsbyggnadskontoret@sigtuna.se" class="newsletter-input" required>
+        </div>
+      </div>
+      <div class="grid__item  one-third">
+        <h3 class="footer-title">Vardag</h3>
+
+        <p>Tycker du om det som händer? Följ vardagen via <a href="https://www.facebook.com/xramp">Facebook</a> eller <a href="{{site.url}}/blogg">Bloggen.</a></p>
+      </div>
+    </div>
+    <div class="footnote">
+      Wired In AB, Sigtuna &copy; {{"now"|date('Y')}} <em class="sep"></em> Box 95, 193 22, Sigtuna <em class="sep"></em> +46 (0)73 512 73 21
+    </div>
+  </div>
 
   <div class="skew skew--bottom"></div>
 </footer>

@@ -9,6 +9,16 @@ html{
 
 body{
   -webkit-font-smoothing: antialiased;
+  color: #21262c;
+}
+
+a{
+  text-decoration: none;
+  color: $brand-color;
+
+  &:hover{
+    text-decoration: underline;
+  }
 }
 
 .site{
@@ -65,12 +75,6 @@ body{
   font-weight: 700;
   line-height: 34px;
   font-size: 20px;
-
-  .home & {
-    li:first-child a {
-      color: #fff;
-    }
-  }
 }
 
 .header{
@@ -119,10 +123,33 @@ body{
   text-indent: -9999px;
 }
 
+.jumbo{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include vendor(transform, translate(-50%, -50%));
+  z-index: 20;
+  color: #fff;
+  text-align: center;
+}
+
+.btn--action{
+  background-color: $brand-color;
+  color: #fff;
+  font-weight: 600;
+  padding: 0 2em !important;
+  @include vendor(border-radius, 5em !important);
+  @include vendor(transition, box-shadow .1s ease);
+
+  &:hover{
+    @include vendor(box-shadow, 0 0 0 2px $brand-color);
+  }
+}
+
 
 .footer{
   position: relative;
-  min-height: 350px;
+  min-height: 500px;
   background: #21262c url('images/footer.jpg') bottom left no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
@@ -137,5 +164,70 @@ body{
     display: block;
     position: absolute;
     z-index: 12;
+  }
+}
+
+.page-title{
+  font-weight: 300;
+  font-size: 2.5em;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1em;
+}
+
+.article-body{
+  font-size: 1.25em;
+  p{
+    color: lighten(#21262c, 10%);
+  }
+}
+
+.footer-wrap{
+  color: #fff;
+  position: absolute;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  @include vendor(transform, translate(-50%, -35%));
+  z-index: 20;
+}
+
+.footer-blocks{
+  padding-bottom: 20px;
+  @extend .cf;
+
+  p{
+    margin-bottom: 0;
+  }
+}
+
+.footnote{
+  margin-top: 10px;
+  padding: 5px 0;
+  border-top: 1px solid #fff;
+  font-size: 14px;
+  @extend .cf;
+  width: 100%;
+  display: block;
+}
+
+.newsletter-wrap{
+  position: relative;
+  padding-top: 10px;
+}
+
+.newsletter-input{
+  border: none;
+  @include vendor(appearance, none);
+  background-color: transparent;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  padding: 5px;
+  font-style: italic;
+  color: #fff;
+
+  &:focus{
+    outline: none;
+    border-bottom-color: $brand-color;
   }
 }

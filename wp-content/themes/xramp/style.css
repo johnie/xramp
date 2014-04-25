@@ -786,7 +786,7 @@ textarea:focus {
  * and over in your markup.
  */
 /* line 10, style/generic/_clearfix.scss */
-.cf:after, .header-wrap:after, .nav:after, .close-btn:after, .media:after, .island:after,
+.cf:after, .header-wrap:after, .footer-blocks:after, .footnote:after, .nav:after, .close-btn:after, .media:after, .island:after,
 .islet:after {
   content: "";
   display: table;
@@ -877,9 +877,20 @@ html {
 /* line 10, style/base/_main.scss */
 body {
   -webkit-font-smoothing: antialiased;
+  color: #21262c;
 }
 
-/* line 14, style/base/_main.scss */
+/* line 15, style/base/_main.scss */
+a {
+  text-decoration: none;
+  color: #29ba9c;
+}
+/* line 19, style/base/_main.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 24, style/base/_main.scss */
 .site {
   position: absolute;
   top: 0;
@@ -893,7 +904,7 @@ body {
   -o-transition: -o-transform .2s ease;
   transition: transform .2s ease;
 }
-/* line 27, style/base/_main.scss */
+/* line 37, style/base/_main.scss */
 .site.menu-open {
   -webkit-transform: translateX(-250px);
   -moz-transform: translateX(-250px);
@@ -902,7 +913,7 @@ body {
   transform: translateX(-250px);
 }
 
-/* line 32, style/base/_main.scss */
+/* line 42, style/base/_main.scss */
 .nav-wrap {
   position: fixed;
   right: 0;
@@ -913,12 +924,12 @@ body {
   color: #fff;
   padding: 40px 0;
 }
-/* line 42, style/base/_main.scss */
+/* line 52, style/base/_main.scss */
 .nav-wrap a {
   color: #888;
   text-decoration: none;
 }
-/* line 46, style/base/_main.scss */
+/* line 56, style/base/_main.scss */
 .nav-wrap a:hover {
   color: #fff;
   text-decoration: none;
@@ -928,37 +939,33 @@ body {
   -o-transition: color 0.2s;
   transition: color 0.2s;
 }
-/* line 53, style/base/_main.scss */
+/* line 63, style/base/_main.scss */
 .nav-wrap .current-menu-item a {
   color: #fff;
 }
 
-/* line 58, style/base/_main.scss */
+/* line 68, style/base/_main.scss */
 .nav-inner {
   padding: 30px 30px 0;
   position: relative;
 }
 
-/* line 63, style/base/_main.scss */
+/* line 73, style/base/_main.scss */
 .main-nav {
   letter-spacing: 1px;
   font-weight: 700;
   line-height: 34px;
   font-size: 20px;
 }
-/* line 70, style/base/_main.scss */
-.home .main-nav li:first-child a {
-  color: #fff;
-}
 
-/* line 76, style/base/_main.scss */
+/* line 80, style/base/_main.scss */
 .header {
   background: #21262c url("images/header.jpg") bottom center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   position: relative;
 }
-/* line 82, style/base/_main.scss */
+/* line 86, style/base/_main.scss */
 .header:after {
   content: '';
   top: 0;
@@ -971,7 +978,7 @@ body {
   z-index: 12;
 }
 
-/* line 95, style/base/_main.scss */
+/* line 99, style/base/_main.scss */
 .header-wrap {
   position: relative;
   z-index: 20;
@@ -980,13 +987,13 @@ body {
   padding: 40px 20px 0;
 }
 
-/* line 104, style/base/_main.scss */
+/* line 108, style/base/_main.scss */
 .site-title {
   float: left;
   margin: 0;
 }
 
-/* line 109, style/base/_main.scss */
+/* line 113, style/base/_main.scss */
 .logo {
   font-size: 10px;
   color: #fff;
@@ -1000,15 +1007,56 @@ body {
   text-indent: -9999px;
 }
 
-/* line 123, style/base/_main.scss */
+/* line 126, style/base/_main.scss */
+.jumbo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  color: #fff;
+  text-align: center;
+}
+
+/* line 136, style/base/_main.scss */
+.btn--action {
+  background-color: #29ba9c;
+  color: #fff;
+  font-weight: 600;
+  padding: 0 2em !important;
+  -webkit-border-radius: 5em !important;
+  -moz-border-radius: 5em !important;
+  -ms-border-radius: 5em !important;
+  -o-border-radius: 5em !important;
+  border-radius: 5em !important;
+  -webkit-transition: box-shadow 0.1s ease;
+  -moz-transition: box-shadow 0.1s ease;
+  -ms-transition: box-shadow 0.1s ease;
+  -o-transition: box-shadow 0.1s ease;
+  transition: box-shadow 0.1s ease;
+}
+/* line 144, style/base/_main.scss */
+.btn--action:hover {
+  -webkit-box-shadow: 0 0 0 2px #29ba9c;
+  -moz-box-shadow: 0 0 0 2px #29ba9c;
+  -ms-box-shadow: 0 0 0 2px #29ba9c;
+  -o-box-shadow: 0 0 0 2px #29ba9c;
+  box-shadow: 0 0 0 2px #29ba9c;
+}
+
+/* line 150, style/base/_main.scss */
 .footer {
   position: relative;
-  min-height: 350px;
+  min-height: 500px;
   background: #21262c url("images/footer.jpg") bottom left no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 130, style/base/_main.scss */
+/* line 157, style/base/_main.scss */
 .footer:after {
   content: '';
   top: 0;
@@ -1019,6 +1067,85 @@ body {
   display: block;
   position: absolute;
   z-index: 12;
+}
+
+/* line 170, style/base/_main.scss */
+.page-title {
+  font-weight: 300;
+  font-size: 2.5em;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1em;
+}
+
+/* line 178, style/base/_main.scss */
+.article-body {
+  font-size: 1.25em;
+}
+/* line 180, style/base/_main.scss */
+.article-body p {
+  color: #373f49;
+}
+
+/* line 185, style/base/_main.scss */
+.footer-wrap {
+  color: #fff;
+  position: absolute;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -35%);
+  -moz-transform: translate(-50%, -35%);
+  -ms-transform: translate(-50%, -35%);
+  -o-transform: translate(-50%, -35%);
+  transform: translate(-50%, -35%);
+  z-index: 20;
+}
+
+/* line 195, style/base/_main.scss */
+.footer-blocks {
+  padding-bottom: 20px;
+}
+/* line 199, style/base/_main.scss */
+.footer-blocks p {
+  margin-bottom: 0;
+}
+
+/* line 204, style/base/_main.scss */
+.footnote {
+  margin-top: 10px;
+  padding: 5px 0;
+  border-top: 1px solid #fff;
+  font-size: 14px;
+  width: 100%;
+  display: block;
+}
+
+/* line 214, style/base/_main.scss */
+.newsletter-wrap {
+  position: relative;
+  padding-top: 10px;
+}
+
+/* line 219, style/base/_main.scss */
+.newsletter-input {
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  padding: 5px;
+  font-style: italic;
+  color: #fff;
+}
+/* line 229, style/base/_main.scss */
+.newsletter-input:focus {
+  outline: none;
+  border-bottom-color: #29ba9c;
 }
 
 /*------------------------------------*\
@@ -1978,6 +2105,7 @@ label,
   width: 100%;
   padding-left: 24px;
   vertical-align: top;
+  float: left;
 }
 
 /*------------------------------------*\
@@ -4083,15 +4211,27 @@ html.flexbox {
   padding-left: 0 !important;
 }
 
+/** 
+ * Separators
+ */
+/* line 102, style/generic/_helper.scss */
+.sep {
+  margin: 0 0.5em;
+}
+/* line 102, style/generic/_helper.scss */
+.sep:before {
+  content: '･';
+}
+
 /**
  * Pull items full width of `.island` parents.
  */
-/* line 102, style/generic/_helper.scss */
+/* line 107, style/generic/_helper.scss */
 .full-bleed {
   margin-right: -24px !important;
   margin-left: -24px !important;
 }
-/* line 106, style/generic/_helper.scss */
+/* line 111, style/generic/_helper.scss */
 .islet .full-bleed {
   margin-right: -12px !important;
   margin-left: -12px !important;
@@ -4101,7 +4241,7 @@ html.flexbox {
  * Add a help cursor to any element that gives the user extra information on
  * `:hover`.
  */
-/* line 117, style/generic/_helper.scss */
+/* line 122, style/generic/_helper.scss */
 .informative {
   cursor: help !important;
 }
@@ -4109,7 +4249,7 @@ html.flexbox {
 /**
  * Mute an object by reducing its opacity.
  */
-/* line 125, style/generic/_helper.scss */
+/* line 130, style/generic/_helper.scss */
 .muted {
   opacity: 0.5 !important;
   filter: alpha(opacity=50) !important;
@@ -4121,7 +4261,7 @@ html.flexbox {
    <p class=proceed><a href=#>Read more...</a></p>
  *
  */
-/* line 137, style/generic/_helper.scss */
+/* line 142, style/generic/_helper.scss */
 .proceed {
   text-align: right !important;
 }
@@ -4132,7 +4272,7 @@ html.flexbox {
    <a href=# class=go>Read more</a>
  *
  */
-/* line 148, style/generic/_helper.scss */
+/* line 153, style/generic/_helper.scss */
 .go:after {
   content: "\00A0" "\00BB" !important;
 }
@@ -4140,7 +4280,7 @@ html.flexbox {
 /**
  * Apply capital case to an element (usually a `strong`).
  */
-/* line 156, style/generic/_helper.scss */
+/* line 161, style/generic/_helper.scss */
 .caps {
   text-transform: uppercase !important;
 }
@@ -4149,7 +4289,7 @@ html.flexbox {
  * Hide content off-screen without resorting to `display:none;`, also provide
  * breakpoint specific hidden elements.
  */
-/* line 176, style/generic/_helper.scss */
+/* line 181, style/generic/_helper.scss */
 .accessibility,
 .visuallyhidden {
   border: 0 !important;
@@ -4163,7 +4303,7 @@ html.flexbox {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 183, style/generic/_helper.scss */
+  /* line 188, style/generic/_helper.scss */
   .accessibility--palm,
   .visuallyhidden--palm {
     border: 0 !important;
@@ -4177,7 +4317,7 @@ html.flexbox {
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 1023px) {
-  /* line 183, style/generic/_helper.scss */
+  /* line 188, style/generic/_helper.scss */
   .accessibility--lap,
   .visuallyhidden--lap {
     border: 0 !important;
@@ -4191,7 +4331,7 @@ html.flexbox {
   }
 }
 @media only screen and (min-width: 481px) {
-  /* line 183, style/generic/_helper.scss */
+  /* line 188, style/generic/_helper.scss */
   .accessibility--lap-and-up,
   .visuallyhidden--lap-and-up {
     border: 0 !important;
@@ -4205,7 +4345,7 @@ html.flexbox {
   }
 }
 @media only screen and (max-width: 1023px) {
-  /* line 183, style/generic/_helper.scss */
+  /* line 188, style/generic/_helper.scss */
   .accessibility--portable,
   .visuallyhidden--portable {
     border: 0 !important;
@@ -4219,7 +4359,7 @@ html.flexbox {
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 183, style/generic/_helper.scss */
+  /* line 188, style/generic/_helper.scss */
   .accessibility--desk,
   .visuallyhidden--desk {
     border: 0 !important;
@@ -4233,7 +4373,7 @@ html.flexbox {
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 183, style/generic/_helper.scss */
+  /* line 188, style/generic/_helper.scss */
   .accessibility--desk-wide,
   .visuallyhidden--desk-wide {
     border: 0 !important;

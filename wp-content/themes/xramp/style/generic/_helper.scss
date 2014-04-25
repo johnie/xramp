@@ -96,6 +96,11 @@
 .hard--sides    { padding-right: 0!important; padding-left:  0!important; }
 
 
+/** 
+ * Separators
+ */
+.sep { margin: 0 0.5em; &:before{content: '･';} }
+
 /**
  * Pull items full width of `.island` parents.
  */

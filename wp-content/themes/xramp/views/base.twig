@@ -19,7 +19,7 @@
   <div class="nav-inner">
     <ul class="nav nav--stacked secondary-nav">
       {% for item in secondary.items %}
-        <li id="menu-item-{{item.ID}}" class="menu-item menu-item-type-{{item.type}} menu-item-object-{{item.object}} menu-item-{{item.ID}} {% if item.current %} current-menu-item{% endif %}">
+        <li id="menu-item-{{item.ID}}" class="menu-item menu-item-{{item.ID}} {% if item.current %} current-menu-item{% endif %}">
           <a href="{{item.link}}">{{item.title}}</a>
         </li>
       {% endfor %}
@@ -29,9 +29,9 @@
 
 <div class="site">
   {% include 'header.twig' %}
-    <div class="container container-padding">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, delectus, voluptatem rerum molestias sint tempora fugiat corporis nesciunt at temporibus. At ratione enim consequatur voluptatem unde perspiciatis hic asperiores aperiam.</p>
-    </div>
+    {% block content %}
+      Sorry, no content
+    {% endblock %}
   {% include 'footer.twig' %}
 </div>
 {{ function('wp_footer') }}

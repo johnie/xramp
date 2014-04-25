@@ -22,8 +22,13 @@ jQuery(document).ready(function($) {
   skewRight(".skew--bottom");
 
   $(".menu-btn").click(function(){
-    $(".site").toggleClass('menu-open');
-    $("html").toggleClass('overflow--hidden');
+    $(".site").addClass('menu-open');
+    $("html").addClass('overflow--hidden');
+  });
+
+  $(".close-btn").click(function(){
+    $(".site").removeClass('menu-open');
+    $("html").removeClass('overflow--hidden');
   });
 });
 

@@ -4,7 +4,13 @@
 <!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{site.language_attributes}}> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" {{site.language_attributes}}> <!--<![endif]-->
     <head>
-    <title>{{wp_title}} - {{site.description}}</title>
+    <title>
+        {% if post.slug == "hem" %}
+            {{wp_title}} - {{site.description}}
+        {% else %}
+            {{wp_title}} - {{post.title}}
+        {% endif %}
+    </title>
     <meta name="description" content="{{site.description}}">
     <script type="text/javascript" src="//use.typekit.net/ilc2cxr.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
